@@ -1,1 +1,24 @@
-<h1>Hello there</h1>
+<div class = "container">
+  <h1 class = "header-title"> Here are all the items that are currently in stock...</h1>
+
+  <% if (@items.length <= 0) %>
+    <p>Sorry no items :-( </p>
+  <% end %>
+
+  <% @items.each do |item| %>
+    <div class = "card card-item">
+      <div class = "card-body">
+        <h5 class = "card-title"><%= item.name %></h5>
+        <h6 class = "card-subtitle mb-2 text-muted"><%= item.stock %> in stock</h6>
+        <p class = "card-text">
+          <%= item.description %>
+        </p>
+        <p class = "card-text card-item-cost">
+          $<%= '%.2f' % item.price %>
+        </p>
+      </div>
+    </div>
+  <% end %>
+
+
+</div>
