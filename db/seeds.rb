@@ -20,3 +20,14 @@ items = Item.create([
     stock: 1
   }
 ])
+
+cart = Cart.create()
+
+ordered_items = OrderedItem.create([
+                                     {
+                                       quantity: 1,
+                                       carts_id: cart,
+                                       items_id: items[0]
+                                     }
+                                   ])
+
