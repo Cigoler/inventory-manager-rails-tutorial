@@ -1,0 +1,9 @@
+<div class = "container">
+  <h1 class = "text-center">Viewing your Cart</h1>
+
+  <% @ordered_items.each do |oitem| %>
+    <p><%= oitem.item.name %></p>
+  <% end %>
+
+  
+</div>

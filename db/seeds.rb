@@ -21,13 +21,4 @@ items = Item.create([
   }
 ])
 
-cart = Cart.create()
-
-ordered_items = OrderedItem.create([
-                                     {
-                                       quantity: 1,
-                                       carts_id: cart,
-                                       items_id: items[0]
-                                     }
-                                   ])
-
+cart = Cart.create!()
